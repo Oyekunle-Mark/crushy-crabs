@@ -1,12 +1,98 @@
+$color: #0A0812;
+$button-color: #271E43;
+
 .app {
-    color: red;
     margin: 0;
+    color: $color;
     display: flex;
     flex-direction: row;
-    .form {
-        display: block;
+    
+    .addForm {
+        width: 50%;
+        padding: 5px;
+        border-right: 2px solid $color;
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .form {
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+            
+            .label {
+                display: block;
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            
+            .input { 
+                display: block;
+                margin: 0 auto;
+                width: 60%;
+                height: 30px;
+                margin-bottom: 20px;
+                border: {
+                    width: 1px;
+                    style: solid;
+                    color: $color;
+                    radius: 5px;
+                }
+            }
+            
+            .button {
+                @extend .input;
+                height: 50px;
+                font-size: 20px;
+                color: white;
+                background: $button-color;
+                box-shadow: 5px 8px 10px #C176BF;
+                
+                &:hover {
+                    background: #765FB9;
+                }
+                &:active {
+                    background: #A3B95F;
+                    transform: translateY(5px);
+                }
+            }
+        }
     }
+    
     .list {
-        display: block;
+        width: 50%;
+        padding: 5px;
+        h1 {
+            text-align: center;
+        }
+        .empty {
+            font-size: 30px;
+        }
+        .table {
+            width: 100%;
+            font-size: 20px;
+            border-bottom: 2px;
+            .row {
+                border-bottom: 2px;
+            }
+            .button {
+                background: $button-color;
+                color: white;
+                border-radius: 5px;
+                box-shadow: 2px 3px 4px #C176BF;
+                &:hover {
+                    background: #765FB9;
+                }
+                &:active {
+                    background: #A3B95F;
+                    transform: translateY(5px);
+                }
+            }
+        }
     }
 }
+    
+
+    

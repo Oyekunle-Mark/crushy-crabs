@@ -28,8 +28,7 @@ class App extends Component {
     
     render() {
         return ( 
-            <div className='container'>
-                <h1>The Phonebook CRUD App</h1>
+            <div className='app' >
                 <AddUserForm addUser={this.addUser} />
                 <UserList user={this.state.user} deleteUser={this.deleteUser} />
             </div>

@@ -19,8 +19,10 @@ class AddUserForm extends Component {
      
     render() {
         return (
-            <div className='form'>
-                <form onSubmit={event => {
+            <div className='addForm' >
+                <h1>Add Contact</h1>
+                <hr />
+                <form className='form' onSubmit={event => {
                         event.preventDefault()
                         this.props.addUser(this.state)
                         this.setState({
@@ -29,13 +31,13 @@ class AddUserForm extends Component {
                             email: ''
                         })
                     }} >
-                    <label>Name</label>
-                    <input type='text' name='name' value={this.state.name} onChange={this.handleChange} />
-                    <label>Telephone</label>
-                    <input type='number' name='phone' value={this.state.phone} onChange={this.handleChange} />
-                    <label>Email</label>
-                    <input type='email' name='email' value={this.state.email} onChange={this.handleChange} />
-                    <button type='submit'>Add</button>
+                    <label className='label' >Name</label>
+                    <input type='text' name='name' value={this.state.name} onChange={this.handleChange} className='input' /> <br />
+                    <label className='label'>Telephone</label>
+                    <input type='number' name='phone' value={this.state.phone} onChange={this.handleChange} className='input' /> <br />
+                    <label className='label'>Email</label>
+                    <input type='email' name='email' value={this.state.email} onChange={this.handleChange} className='input' /> <br />
+                    <button className='button'type='submit'>Add</button>
                 </form>
             </div>
         )
