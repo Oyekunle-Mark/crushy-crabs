@@ -18,9 +18,7 @@ const UserList = (props) => {
                                 <th>{user.name}</th>
                                 <th>{user.phone}</th>
                                 <th>{user.email}</th>
-                                <th><button>Edit</button>
-                                    <button onClick={() => props.deleteUser(user.id)}>Delete</button>
-                                </th>
+                                <th><button onClick={() => props.deleteUser(user.id)}>Delete</button></th>
                             </tr>
                         )) : 
                         <tr>
