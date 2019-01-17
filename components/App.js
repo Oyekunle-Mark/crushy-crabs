@@ -6,8 +6,7 @@ class App extends Component {
    constructor(props) {
        super(props)
        this.state = {
-           user: [],
-           editing: false
+           user: []
        }
        this.addUser = this.addUser.bind(this)
        this.deleteUser = this.deleteUser.bind(this)
@@ -20,14 +19,6 @@ class App extends Component {
         })
     }
     
-    editUser(id, user) {
-        const newUsers = this.state.user.filter(u => u.id === id ?
-                                                    user : u)
-        this.setState({
-            user: newUsers
-        })
-    }                   
-        
     deleteUser(id) {
         const newUsers = this.state.user.filter(user => user.id !== id)
         this.setState({
@@ -36,16 +27,11 @@ class App extends Component {
     }
     
     render() {
-        const { user, editing } = this.state
         return ( 
             <div className='container'>
                 <h1>The Phonebook CRUD App</h1>
-                {this.editing ? 
-                    <EditForm editUser={this.editUser} /> 
-                    :            
-                    <AddUserForm addUser={this.addUser} />
-                }   
-                <UserList user={user} deleteUser={this.deleteUser} />
+                <AddUserForm addUser={this.addUser} />
+                <UserList user={this.state.user} deleteUser={this.deleteUser} />
             </div>
         )
     }
