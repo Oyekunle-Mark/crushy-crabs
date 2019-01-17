@@ -1,0 +1,12 @@
+.app {
+    color: red;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    .form {
+        display: block;
+    }
+    .list {
+        display: block;
+    }
+}
