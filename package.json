@@ -1,0 +1,33 @@
+{
+  "name": "phonebook_react",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "A react phonebook which performs the CRUD operations: Adds contacts, delete contacts, edit and list existing records.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx webpack-dev-server",
+    "build": "npx webpack"
+  },
+  "keywords": [
+    "\"phonebook\"",
+    "\"CRUD\""
+  ],
+  "author": "oyekunle-mark",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1"
+  }
+}
