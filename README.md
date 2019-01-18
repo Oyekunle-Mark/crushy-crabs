@@ -4,4 +4,4 @@ This is a phonebook built with react which has the ability to:
 * **List existing contacts**
 * **Delete contacts**
 
-Install dependencies with ```npm run install```, build with ```npm run build``` and start the development server with ```npm run start```.
+Install dependencies with ```npm install```, build with ```npm run build``` and start the development server with ```npm run start```.
