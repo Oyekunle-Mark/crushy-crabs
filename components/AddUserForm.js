@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class AddUserForm extends Component {
     constructor(props) {
@@ -42,6 +43,14 @@ class AddUserForm extends Component {
             </div>
         )
     }
+}
+
+AddUserForm.propTypes = {
+    addUser: PropTypes.func,
+}
+
+AddUserForm.defaultProps = {
+    addUser: f => f,
 }
 
 export default AddUserForm
