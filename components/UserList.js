@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const UserList = (props) => {
     return (
@@ -31,6 +32,16 @@ const UserList = (props) => {
             </table>
         </div>
     )
+}
+
+UserList.propTypes = {
+    user: PropTypes.arrayOf(PropTypes.object),
+    deleteUser: PropTypes.func,
+}
+
+UserList.defaultProps = {
+    user: [],
+    deleteUser: f => f,
 }
 
 export default UserList
