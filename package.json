@@ -1,7 +1,7 @@
 {
   "name": "phonebook_react",
   "version": "1.0.0",
-  "private": "true",
+  "private": true,
   "description": "A react phonebook which performs the CRUD operations: Adds contacts, delete contacts, edit and list existing records.",
   "main": "index.js",
   "scripts": {
